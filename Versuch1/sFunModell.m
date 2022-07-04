@@ -10,9 +10,10 @@ end
 % *************************************************************************
 function setup(block)
 
-	% Anzahl der Ein-/Ausgänge
+	% Anzahl der Ein-/Ausgï¿½nge
 	block.NumInputPorts  = 1;
 	block.NumOutputPorts = 2;
+% Test git
 
 	% Eigenschaften des Eingangs
 	block.InputPort(1).Dimensions	= 1;
@@ -37,7 +38,7 @@ function setup(block)
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 	
-	% Anzahl der Zustände
+	% Anzahl der Zustï¿½nde
 	block.NumContStates =4 ;
 
 	% Anzahl der Parameter
@@ -69,11 +70,11 @@ end
 
 
 % *************************************************************************
-% Ausgänge berechnen
+% Ausgï¿½nge berechnen
 % *************************************************************************
 function Outputs(block)
 
-	% Zustände auslesen
+	% Zustï¿½nde auslesen
 	x		= block.ContStates.Data;
     phi1=x(1);
     dphi1=x(2);
@@ -100,7 +101,7 @@ function Derivatives(block)
 	Rp1 = block.DialogPrm(6).Data;
     Rp2 = block.DialogPrm(7).Data;
 
-	% Zustände auslesen
+	% Zustï¿½nde auslesen
 	x		= block.ContStates.Data;
 	phi1	= x(1);
 	dphi1   = x(2);
@@ -128,7 +129,7 @@ end
 
 
 % *************************************************************************
-% Aufräumen (wenn nötig)
+% Aufrï¿½umen (wenn nï¿½tig)
 % *************************************************************************
 function Terminate(block)
 end
